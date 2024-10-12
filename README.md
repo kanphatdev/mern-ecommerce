@@ -28,39 +28,52 @@ Below is a reference used for this project:
 | Source | Description |
 |--------|-------------|
 | [EP 1](https://youtu.be/-gOvzR_wpk0?si=vqQ9fgx3dEmlhJBx) | Create a database structure |
+| [EP 2](https://youtu.be/wtbj0KqLxvM?si=06bPrp3hhQX01C_S) | Create a layout page and make routes  |
 
 
 # Initialize a new Node.js project
-
+```bash
 npm init -y
+```
+
 
 # Install necessary dependencies
-
+```bash
 npm install express morgan cors nodemon
+```
 
-echo "Project setup complete!"
+
+
 
 
 
 
 # Install Prisma
 
+
+```bash
 npm install prisma
-
+```
 # Initialize Prisma in the project
-
+```bash
 npx prisma init
+```
+
 
 # Install Prisma client
-
+```bash
 npm install @prisma/client
+```
 
-echo "Prisma setup complete!"
+
+
 
 
 
 # Run Prisma migration
-
+```bash
 npx prisma migrate dev --name init
+```
 
-echo "Migration complete!"
+
+
