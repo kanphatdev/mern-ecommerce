@@ -21,6 +21,13 @@ The following table lists the main tools and providers used in this project:
 | Workbench  | MySQL Workbench: A unified visual tool for database design and management |
 | MySQL      | Open-source relational database management system (RDBMS)         |
 
+## Reference
+
+Below is a reference used for this project:
+
+| Source | Description |
+|--------|-------------|
+| [EP 1](https://youtu.be/-gOvzR_wpk0?si=vqQ9fgx3dEmlhJBx) | Create a database structure |
 
 
 # Initialize a new Node.js project
