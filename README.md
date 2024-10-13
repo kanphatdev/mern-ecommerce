@@ -30,6 +30,7 @@ Below is a reference used for this project:
 | [EP 1](https://youtu.be/-gOvzR_wpk0?si=vqQ9fgx3dEmlhJBx) | Create a database structure |
 | [EP 2](https://youtu.be/wtbj0KqLxvM?si=06bPrp3hhQX01C_S) | Create a layout page and make routes  |
 | [EP 3](https://youtu.be/EVEAO46Gw54?si=jmam2Gx-H6TAlfUm) | Create a register login page and make register login function |
+| [EP 4](https://youtu.be/ArfRL2PWJS0?si=4Bh0ASGpWpkugOS9) | Create a ProtectedRouteUser and ProtectedRouteAdmin |
 
 
 # Initialize a new Node.js project

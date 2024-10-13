@@ -14,6 +14,8 @@ import Product from "../pages/admin/Product";
 import Manage from "../pages/admin/Manage";
 import LayoutUser from "../layouts/LayoutUser";
 import HomeUser from "../pages/user/HomeUser";
+import ProtectedRouteUser from "./ProtectedRouteUser";
+import ProtectedRouteAdmin from "./ProtectedRouteAdmin";
 
 const router = createBrowserRouter([
   // default layout
@@ -33,7 +35,7 @@ const router = createBrowserRouter([
   // admin layout
   {
     path: "/admin",
-    element: <LayoutAdmin />,
+    element: <ProtectedRouteAdmin element={<LayoutAdmin />}/> ,
     children: [
       { index: true, element: <Dashboard /> },
       { path: "category", element: <Category /> },
@@ -45,7 +47,8 @@ const router = createBrowserRouter([
 // layout for user authentication
   {
     path: "/user",
-    element: <LayoutUser/>,
+    // element: <LayoutUser/>,
+    element: <ProtectedRouteUser element={<LayoutUser/>}/>,
     children: [
       { index: true, element: <HomeUser /> },
       
