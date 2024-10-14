@@ -32,7 +32,7 @@ Below is a reference used for this project:
 | [EP 3](https://youtu.be/EVEAO46Gw54?si=jmam2Gx-H6TAlfUm) | Create a register login page and make register login function |
 | [EP 4](https://youtu.be/ArfRL2PWJS0?si=4Bh0ASGpWpkugOS9) | Create a ProtectedRouteUser and ProtectedRouteAdmin |
 | [EP 5](https://youtu.be/xeHAzTije8I?si=a1gxLaIQQFat26O5) | Style the layoutAdmin by using the tailwind css daisy ui lucide react |
-
+| [EP 6](https://youtu.be/EID3dNLHU30?si=_NQ2jmhGYVu83lie) | Create a FormCategory and make handleSubmit getCategory handleRemove  |
 
 # Initialize a new Node.js project
 ```bash
