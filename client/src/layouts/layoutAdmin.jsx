@@ -1,12 +1,18 @@
 import { Outlet } from "react-router-dom";
+import Sidebar from "../components/admin/Sidebar";
+import HeaderBar from "../components/admin/HeaderBar";
 
 const LayoutAdmin = () => {
   return (
-    <div>
-      <h1 className="">sidebar</h1>
-      <h1 className="">header bar</h1>
-      <hr />
-      <Outlet />
+    <div className="flex h-screen">
+      <Sidebar />
+      <div className="flex-1 flex flex-col">
+        <HeaderBar />
+        <main className="flex-1 p-6 bg-base-300 overflow-y-auto">
+           <Outlet />
+        </main>
+       
+      </div>
     </div>
   );
 };
