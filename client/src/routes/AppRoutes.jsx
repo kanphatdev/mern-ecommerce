@@ -16,6 +16,7 @@ import LayoutUser from "../layouts/LayoutUser";
 import HomeUser from "../pages/user/HomeUser";
 import ProtectedRouteUser from "./ProtectedRouteUser";
 import ProtectedRouteAdmin from "./ProtectedRouteAdmin";
+import FormProduct from "../components/admin/FormProduct";
 
 const router = createBrowserRouter([
   // default layout

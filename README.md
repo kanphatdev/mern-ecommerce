@@ -33,6 +33,7 @@ Below is a reference used for this project:
 | [EP 4](https://youtu.be/ArfRL2PWJS0?si=4Bh0ASGpWpkugOS9) | Create a ProtectedRouteUser and ProtectedRouteAdmin |
 | [EP 5](https://youtu.be/xeHAzTije8I?si=a1gxLaIQQFat26O5) | Style the layoutAdmin by using the tailwind css daisy ui lucide react |
 | [EP 6](https://youtu.be/EID3dNLHU30?si=_NQ2jmhGYVu83lie) | Create a FormCategory and make handleSubmit getCategory handleRemove  |
+| [EP 7](https://youtu.be/sbnM68dj9vs?si=JVkKpPn-CC5s9WeX) | Create a add product(admin panel)  |
 
 # Initialize a new Node.js project
 ```bash

@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import { BookmarkX, PlusCircle, Tag } from "lucide-react"; // Import Lucide icon
-import { createCategory, listCategory,removeCategory } from "../../api/Category"; // Assuming the API function is in api/Category.js
+import {
+  createCategory,
+  removeCategory,
+} from "../../api/Category"; // Assuming the API function is in api/Category.js
 import useEcomStore from "../../store/ecom-store";
 import { toast } from "react-toastify";
 
 const FormCategory = () => {
   const token = useEcomStore((state) => state.token); // Retrieve token from store
   const [name, setName] = useState("");
-  const [categories, setCategories] = useState([]);
-
+  // const [categories, setCategories] = useState([]);
+  const categories = useEcomStore((state) => state.categories);
+  const getCategory = useEcomStore((state) => state.getCategory);
   useEffect(() => {
     getCategory(token);
   }, [token]);
@@ -30,30 +34,18 @@ const FormCategory = () => {
     }
   };
 
-  const getCategory = async (token) => {
+  const handleRemove = async (id) => {
+    console.log(id);
     try {
-      const res = await listCategory(token);
-      setCategories(res.data);
+      const res = await removeCategory(token, id);
+      toast.success(`successfully deleted`);
+      getCategory(token);
     } catch (error) {
       const errorMessage =
         error.response?.data?.message || "Failed to fetch categories";
       toast.error(errorMessage);
     }
   };
-const handleRemove = async (id) => {
-  console.log(id);
-  try {
-    const res = await removeCategory(token,id);
-    toast.success(`successfully deleted`);
-    getCategory(token)
-    
-  } catch (error) {
-    const errorMessage =
-    error.response?.data?.message || "Failed to fetch categories";
-  toast.error(errorMessage);
-  }
-  
-}
   return (
     <div className="container mx-auto p-4 flex justify-center items-center h-screen">
       <div className="flex items-center justify-center gap-4">
@@ -120,9 +112,12 @@ const handleRemove = async (id) => {
                       <th>{index + 1}</th>
                       <td>{category.name}</td>
                       <td>
-                      <button className="btn btn-error" onClick={() => handleRemove(category.id)}>
-                      <BookmarkX className="w-5 h-5" />
-                      </button>
+                        <button
+                          className="btn btn-error"
+                          onClick={() => handleRemove(category.id)}
+                        >
+                          <BookmarkX className="w-5 h-5" />
+                        </button>
                       </td>
                     </tr>
                   ))
