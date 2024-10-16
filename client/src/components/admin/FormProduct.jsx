@@ -3,6 +3,7 @@ import useEcomStore from "../../store/ecom-store";
 import { PlusCircle, Package } from "lucide-react"; // Import Lucide icons
 import { toast } from "react-toastify";
 import { createProduct } from "../../api/product";
+import UploadFile from "./UploadFile";
 
 const initialState = {
   title: "core i7",
@@ -74,7 +75,9 @@ const FormProduct = () => {
           {/* Product Description */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-neutral-content">Description</span>
+              <span className="label-text text-neutral-content">
+                Description
+              </span>
             </label>
             <input
               type="text"
@@ -114,6 +117,13 @@ const FormProduct = () => {
               className="input input-bordered input-accent w-full"
               onChange={handleChange}
             />
+          </div>
+          {/* upload file component */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text text-neutral-content capitalize">product image</span>
+            </label>
+            <UploadFile form={form} setForm={setForm} />
           </div>
 
           {/* Category Select */}
@@ -190,4 +200,3 @@ const FormProduct = () => {
 };
 
 export default FormProduct;
-  

@@ -7,7 +7,7 @@ const { readdirSync } = require("fs");
 const app = express();
 // midleware
 app.use(morgan("dev"));
-app.use(express.json());
+app.use(express.json({limit: '20mb'}));
 app.use(cors());
 // routes
 readdirSync("./routes").map((item) =>

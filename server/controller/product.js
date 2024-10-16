@@ -1,5 +1,5 @@
 const prisma = require("../config/prisma");
-
+const cloudinary = require("cloudinary").v2;
 exports.create = async (req, res) => {
   try {
     // code
@@ -221,5 +221,34 @@ exports.searchFilters = async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "server error" });
+  }
+};
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET_KEY, // Click 'View API Keys' above to copy your API secret
+});
+exports.createImages = async (req, res) => {
+  try {
+      //code
+      // console.log(req.body)
+      const result = await cloudinary.uploader.upload(req.body.image, {
+          public_id: `Roitai-${Date.now()}`,
+          resource_type: 'auto',
+          folder: 'Ecom2024'
+      })
+      res.send(result)
+  } catch (err) {
+      //err
+      console.log(err)
+      res.status(500).json({ message: "Server Error" })
+  }
+}
+exports.removeImages = async (req, res) => {
+  try {
+    res.send("remove Images product ");
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: " error to remove Images" });
   }
 };

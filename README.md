@@ -34,14 +34,15 @@ Below is a reference used for this project:
 | [EP 5](https://youtu.be/xeHAzTije8I?si=a1gxLaIQQFat26O5) | Style the layoutAdmin by using the tailwind css daisy ui lucide react |
 | [EP 6](https://youtu.be/EID3dNLHU30?si=_NQ2jmhGYVu83lie) | Create a FormCategory and make handleSubmit getCategory handleRemove  |
 | [EP 7](https://youtu.be/sbnM68dj9vs?si=JVkKpPn-CC5s9WeX) | Create a add product(admin panel)  |
+| [EP 8](https://youtu.be/p9-GgtEPxEE?si=wjLqIJj2b3UWSzc7) | Create a add product image function |
 
-# Initialize a new Node.js project
+#### Initialize a new Node.js project
 ```bash
 npm init -y
 ```
 
 
-# Install necessary dependencies
+#### Install necessary dependencies
 ```bash
 npm install express morgan cors nodemon
 ```
@@ -52,19 +53,19 @@ npm install express morgan cors nodemon
 
 
 
-# Install Prisma
+#### Install Prisma
 
 
 ```bash
 npm install prisma
 ```
-# Initialize Prisma in the project
+#### Initialize Prisma in the project
 ```bash
 npx prisma init
 ```
 
 
-# Install Prisma client
+#### Install Prisma client
 ```bash
 npm install @prisma/client
 ```
@@ -74,7 +75,7 @@ npm install @prisma/client
 
 
 
-# Run Prisma migration
+#### Run Prisma migration
 ```bash
 npx prisma migrate dev --name init
 ```

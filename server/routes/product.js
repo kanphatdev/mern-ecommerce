@@ -10,8 +10,12 @@ const {
   remove,
   searchFilters,
   update,
-  read
+  read,
+  removeImages,
+  createImages,
 } = require("../controller/product");
+// middleware
+const { authCheck, adminCheck } = require("../middleware/authCheck");
 //  route
 
 router.post("/product", create);
@@ -21,5 +25,6 @@ router.get("/product/:id", read);
 router.delete("/product/:id", remove);
 router.post("/productby", listby);
 router.post("/search/filters", searchFilters);
-
+router.post("/images",authCheck,adminCheck, createImages);
+router.post("/removeimages",authCheck,adminCheck, removeImages);
 module.exports = router;
